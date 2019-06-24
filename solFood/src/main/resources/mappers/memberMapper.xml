@@ -34,7 +34,6 @@
 			FROM account WHERE account_user = #{account_user}
 		</select>
 	    
-	    
 	    <!-- 이메일 중복 검사 -->
    	    <select id="check_email" parameterType="String" resultType="int">
 			SELECT COUNT(*) 
