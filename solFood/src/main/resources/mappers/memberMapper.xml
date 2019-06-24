@@ -2,22 +2,12 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- 
 	<mapper namespace="com.solfood.mapper.memberMapper">
-	
-	
-		<!-- 회원정보 조회 -->	
-		<select id="selectMember" resultType="memberVO">
-	        SELECT * FROM ACCOUNT
-	    </select>    
-	    
-	    
-	    <!-- 로그인 -->
-		<select id="loginCheck" resultType="String">
-			SELECT account_user, account_password
+	<!-- ========================== 로그인=============================== 6/24 수정됨 by 영민 -->
+		<select id="login" resultType="com.solfood.dto.MemberVO">
+			SELECT *
 			FROM account
-			WHERE account_user = #{account_user}
-			AND account_password = #{account_password}
+			WHERE account_user = #{account_user} AND account_password = #{account_password}
 		</select>
 		
 		<select id="viewMember" resultType="MemberVO">
@@ -30,8 +20,13 @@
 	        WHERE account_user = #{account_user} 
 	        AND account_password = #{account_password}
 	    </select>
-
-
+	
+	
+	<!-- ========================== 회원 가입 =============================== 6/24 수정 필요 by 영민-->
+		<!-- 회원정보 조회 -->	
+		<select id="selectMember" resultType="memberVO">
+	        SELECT * FROM ACCOUNT
+	    </select>    
 	    
 	    <!-- 아이디 중복 검사 -->
     	<select id="check_id" parameterType="String" resultType="int">
@@ -77,21 +72,7 @@
 					#{account_gender},
 					#{account_email})
 	    </insert> -->
-	    
-	    
-	    <!-- 회원수정 -->
-	    
 
-	    
-	    <!-- 회원탈퇴 -->
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
 	</mapper>
 
 	
