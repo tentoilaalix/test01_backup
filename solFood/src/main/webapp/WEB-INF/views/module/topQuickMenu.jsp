@@ -66,9 +66,10 @@
 		<a href="" id="caption"><img src="../resources/image/newest.png" alt="최근 본 상품"><br>최근 본 상품</a><br><br>
 		<a href="" id="caption"><img src="../resources/image/like.png" alt="찜한 상품"><br>찜한 상품</a><br><br>
 		<a href="${path}/member/login.do"><img src="../resources/image/top.png" onclick="#" alt="맨 위로"></a><br><br>
-		<a href="${path}/board/list.do" id="caption"><img src="../resources/image/top.png" onclick="#" alt="asdasd"><br>####</a>
+		<a href="${path}/board/list.do" id="caption"><img src="../resources/image/top.png" onclick="#" alt="asdasd"><br>테스트페이지</a><br><br>
 
-		<a href="${path}/manager/product/product_register.do">상품등록</a>
+		<a href="${path}/member/mypage.do"><br>mypage</a><br><br>
+		<a href="${path}/manager/product/product_register.do">상품등록</a><br><br>
 
 		
 	</div>

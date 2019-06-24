@@ -121,6 +121,7 @@ public class ManagerController {
 		
 		return "/manager/buy/buy_list";
 	}
+	 
 }
 
 

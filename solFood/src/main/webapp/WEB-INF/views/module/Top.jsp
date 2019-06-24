@@ -53,7 +53,7 @@
 			        <a href="${path}/member/joinMember.do"><strong>회원가입&nbsp;</strong></a>
 			    </c:when>
 			    <c:otherwise>
-			        <a href="${path}/board/list.do"><strong>마이페이지&nbsp;</strong></a>&nbsp;｜&nbsp;
+			        <a href="${path}/member/mypage.do"><strong>마이페이지&nbsp;</strong></a>&nbsp;｜&nbsp;
 			        <a href="${path}/member/logout.do"><strong>로그아웃&nbsp;</strong></a>
 			    </c:otherwise>
 			</c:choose>

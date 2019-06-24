@@ -5,13 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>mypage</title>
+<%-- =============================== top =========================================--%>
 	<%@ include file = "../module/Top.jsp" %>
 </head>
 <body>
 <h1>마이페이지</h1>
 <hr>
-<%-- 
+
+<%-- =============================== contents =======================================--%>
 <table>
 	<thead>
 		<tr>
@@ -28,23 +30,20 @@
 		</tr>
 	</thead>
 	<tbody>
-		<c:forEach items="${memberList}" var="member">
-			<tr>
-				<td>${member.account_user}</td>
-				<td>${member.account_password}</td>
-				<td>${member.account_name}</td>
-				<td>${member.account_tel}</td>
-				<td>${member.account_date}</td>
-				<td>${member.account_address}</td>
-				<td>${member.account_grade}</td>
-				<td>${member.account_age}</td>
-				<td>${member.account_gender}</td>
-				<td>${member.account_email}</td>
-			</tr>
-		</c:forEach>
+		<tr>
+			<td>${login.account_user}</td>
+			<td>${login.account_password}</td>
+			<td>${login.account_name}</td>
+			<td>${login.account_tel}</td>
+			<td>${login.account_date}</td>
+			<td>${login.account_address}</td>
+			<td>${login.account_grade}</td>
+			<td>${login.account_age}</td>
+			<td>${login.account_gender}</td>
+			<td>${login.account_email}</td>
+		</tr>
 	</tbody>
 </table> 
---%>
 
 </body>
 </html>

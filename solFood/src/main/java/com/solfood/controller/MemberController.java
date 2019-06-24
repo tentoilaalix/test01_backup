@@ -106,24 +106,12 @@ public class MemberController {
 	
 	
 	//============================================================
-    //	mypage--> *** servlet-context.xml에서, mypage로 이동하기 전에 로그인이 되었는지 intercept하게 설정해두었음 ***
-    // 				6/24 기준 수정 필요 by 영민
+    //	mypage--> *** servlet-context.xml에서, mypage로 이동하기 전에 로그인이 되었는지 intercept하게 설정해두었음 ***	6/24 기준 수정 필요 by 영민
 	//============================================================
-	// ** 둘이 합칠 예정 ** 
     // 마이페이지 이동
 	@RequestMapping(value="/mypage.do")
 	public String mypage() throws Exception{
 		return "/member/mypage";
 	}	
 	
-	// 회원정보 관리
-	@RequestMapping(value = "/status.do", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) throws Exception{
-	    logger.info("status");
-	        
-	    List<MemberVO> memberList = memberService.selectMember();
-	    model.addAttribute("memberList", memberList);
-	 
-	    return "/member/status";
-	}    
 }
