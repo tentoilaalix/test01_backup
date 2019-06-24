@@ -48,7 +48,7 @@
 	<div class="row">
 		<div class="col-sm-offset-10">
 			<c:choose>
-			    <c:when test="${sessionScope.userId == null}">
+			    <c:when test="${login.account_user == null}">
 			        <a href="${path}/member/login.do"><strong>로그인&nbsp;</strong></a>&nbsp;｜&nbsp;
 			        <a href="${path}/member/joinMember.do"><strong>회원가입&nbsp;</strong></a>
 			    </c:when>

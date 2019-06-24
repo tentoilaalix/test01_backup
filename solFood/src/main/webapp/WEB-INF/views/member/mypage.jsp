@@ -11,7 +11,7 @@
 <body>
 <h1>마이페이지</h1>
 <hr>
-
+<%-- 
 <table>
 	<thead>
 		<tr>
@@ -44,6 +44,7 @@
 		</c:forEach>
 	</tbody>
 </table> 
+--%>
 
 </body>
 </html>

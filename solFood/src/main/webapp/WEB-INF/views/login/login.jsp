@@ -32,7 +32,16 @@
 </script>
 </head>
 <body>
-
+<c:choose>
+	    <c:when test="${login.account_user != null}">
+	        <a href="${path}/"><strong>로그인&nbsp;</strong></a>&nbsp;｜&nbsp;
+	        <a href="${path}#"><strong>회원가입&nbsp;</strong></a>
+	    </c:when>
+	    <c:otherwise>
+	        <a href="${path}#"><strong>마이페이지&nbsp;</strong></a>&nbsp;｜&nbsp;
+	        <a href="${path}/member/logout.do"><strong>로그아웃&nbsp;</strong></a>
+	    </c:otherwise>
+	</c:choose>
 
 <div align="center">
 	<h1>login Form @@@</h1>

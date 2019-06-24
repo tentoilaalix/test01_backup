@@ -29,12 +29,12 @@ public class MemberDAOImpl implements MemberDAO {
 
 	
 	/* 로그인 */
-	// 01_01. 회원 로그인체크
-    @Override
-    public boolean loginCheck(MemberVO vo) {
-        String name = sqlSession.selectOne(Namespace+".loginCheck", vo);
-        return (name == null) ? false : true;
-    }
+	// login
+	@Override
+	public MemberVO login(MemberVO vo) {
+		return sqlSession.selectOne(Namespace+".login", vo);
+	}	
+	
     // 01_02. 회원 로그인 정보
     @Override
     public MemberVO viewMember(MemberVO vo) {
@@ -44,7 +44,5 @@ public class MemberDAOImpl implements MemberDAO {
     @Override
     public void logout(HttpSession sessin) {
     }
-
-
 
 }

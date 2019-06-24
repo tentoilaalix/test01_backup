@@ -28,27 +28,19 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	/* 로그인 */
-	// 01_01. 회원 로그인체크
-    @Override
-    public boolean loginCheck(MemberVO vo, HttpSession session) {
-        boolean result = dao.loginCheck(vo);
-        if (result) { // true일 경우 세션에 등록
-            MemberVO vo2 = viewMember(vo);
-            // 세션 변수 등록
-            session.setAttribute("userId", vo2.getAccount_user());
-            session.setAttribute("userPw", vo2.getAccount_password());
-            session.setAttribute("userName", vo2.getAccount_name());
-            session.setAttribute("userGrade", vo2.getAccount_grade());
-            
-        } 
-        return result;
-    }
-    // 01_02. 회원 로그인 정보
+	// 로그인
+		@Override
+		public MemberVO login(MemberVO vo) {
+			return dao.login(vo);
+		}
+	
+    // 회원 로그인 정보
     @Override
     public MemberVO viewMember(MemberVO vo) {
         return dao.viewMember(vo);
     }
-    // 02. 회원 로그아웃
+    
+    // 회원 로그아웃
     @Override
     public void logout(HttpSession session) {
         // 세션 변수 개별 삭제
@@ -57,9 +49,6 @@ public class MemberServiceImpl implements MemberService {
         session.invalidate();
     }
 
-
-	
-	
 }
 
 
