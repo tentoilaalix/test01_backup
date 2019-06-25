@@ -41,6 +41,41 @@
 
 .sun {
   animation-name: sun-keyframes;
+  animation-duration: 400ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+@keyframes sun-keyframes {
+  0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  8.33% {transform:translate(-5.7191px, 33.3333px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  16.67% {transform:translate(-25.4644px, 66.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  25% {transform:translate(-100px, 100px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  33.33% {transform:translate(-174.5356px, 66.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  41.67% {transform:translate(-194.2809px, 33.3333px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  50% {transform:translate(-200px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  58.33% {transform:translate(-194.2237px, -33.3333px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  66.67% {transform:translate(-174.281px, -66.6667px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  75% {transform:translate(-99px, -100px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  83.33% {transform:translate(-25.2098px, -67px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  91.67% {transform:translate(-5.6619px, -34px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  100% {transform:translate(0px, -1px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+}html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+
+
+
+
+
+
+
+
+/* 
+
+
+.sun {
+  animation-name: sun-keyframes;
   animation-duration: 2000ms;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
@@ -49,6 +84,7 @@
   transform-origin: 0 0;
   z-index: 10;
 }
+
 @keyframes sun-keyframes {
   0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
   1.61% {transform:translate(-0.0877px, -0.6935px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
@@ -114,4 +150,4 @@
   98.39% {transform:translate(68.0877px, -42.3065px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
   100% {transform:translate(68px, -43px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
 }html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
-
+ */

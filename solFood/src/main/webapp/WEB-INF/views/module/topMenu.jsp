@@ -4,45 +4,81 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<script src="resources/js/jquery-3.3.1.min.js"></script>
-	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+	<link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../resources/js/jquery-3.3.1.min.js"></script>
+	<script src="../resources/bootstrap/js/bootstrap.min.js"></script>
+	<%--a 스타일 --%>
+	<style type="text/css">
+ 		a { text-decoration: none;}
+ 		a:link { color: black; text-decoration: none !important;}
+ 		a:active { color: black !important; text-decoration: none !important;}
+		a:visited { color: black !important; text-decoration: none !important;}
+ 		a:hover { color: black !important; text-decoration: none !important;}
+	</style>
     <style>
       body {
-        margin: 0px;
-        padding: 0px;
+        font-weight: bold;
       }
       .jbTitle {
         text-align: center;
       }
       .jbMenu {
         background-color: #FAE0D4;
-        padding: 5px 0px;
         width: 100%;
         z-index: 10;
+        font-size: 18px;
       }
       .jbContent {
         
       }
       .jbFixed {
         position: fixed;
-        top: 0px;
+       	top: 0px;
       }
       #topMenu {
-      	border: none;
-      	background-color: #FAE0D4;
+      	display: inline-block;
+      	width: 100px;
+      	height: 40px;
+      	text-align: center;
+      	line-height: 48px;
       }
+      #topCate {
+      	display: inline-block;
+      	width: 100px;
+      	height: 40px;
+      	text-align: center;
+      	line-height: 48px;
+      }
+      
+      
+    #topMenu::after {
+    width: 67%;
+    height: 0;
+    background: #fff;
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    margin: auto;
+  }
+  #topMenu:hover::after {
+    opacity: 1;
+    top: 100%;
+    height: 4px;
+  }
+      
       #topSearch {
       	border-radius: 5px;
       }
-      
+	     
       li.dropdown {
       	list-style: none;
-      	margin-top: 7px;
       }
       
       ul.dropdown-menu {
-      	margin-top: 15px;
+      	margin-top: 10px;
       	border-radius: none;
       }
       .dropdown-submenu{
@@ -52,13 +88,16 @@
 	  a.dropdown-toggle:hover {
 	  	background-color: #FAE0D4;
 	  }
+	  #topCate:hover>#middleCate{
+	  	display: block;
+	  }
 	  .dropdown-submenu>.dropdown-menu{
 	  	top:0;
 	  	left:100%;
 	  	margin-top: -4px;
 	  	margin-left: 0px;
 	  	}
-
+	  
 	  .dropdown-submenu:hover>.dropdown-menu{
 	  	display:block;
 	  	}
@@ -82,6 +121,7 @@
 	  	}
 	  	
 .d3 {
+  margin-top: 5px;
   background: #fff;
   width: 230px;
   border-radius: 5px;
@@ -101,13 +141,14 @@
   height: 40px;
   padding-left: 15px;
   border-radius: 5px;
+  font-size: 10px !important;
 }
 .d3 button {
   height: 38px;
   width: 35px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: -50px !important;
   padding: 0;
   cursor: pointer;
 }
@@ -127,26 +168,25 @@
           }
         });
       });
+
     </script>
   </head>
   <body>
+
     <div class="jbTitle">
   
     </div>
     
-
-    
-    
-    
     <div class="jbMenu">
+    <div class="container">
     <div class="row">
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-xs-2">
      <nav>
    <div>
       <ul>
          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong><span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;카테고리</strong></a>
-            <ul class="dropdown-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="topCate"><img src="../resources/image/list.png">&nbsp;&nbsp;카테고리</a>
+            <ul class="dropdown-menu" id="middleCate">
                <li class="dropdown-submenu">
                   <a href="#"><strong>채소·과일</strong></a>
                   <ul class="dropdown-menu">
@@ -194,28 +234,29 @@
 </nav>
 
   </div>
-  <div class="col-md-2">
-  <button class="btn btn-default" id="topMenu"><strong>신상품</strong></button>
+  <div class="col-xs-2">
+  <a href="#" id="topMenu">공 지 사 항</a>
   </div>
-  <div class="col-md-2">
-  <button class="btn btn-default" id="topMenu"><strong>베스트</strong></button>
+  <div class="col-xs-2">
+  <a href="#" id="topMenu">이 벤 트</a>
   </div>
-  <div class="col-md-2">
-  <button class="btn btn-default" id="topMenu"><strong>이벤트</strong></button>
+  <div class="col-xs-2">
+  <a href="#" id="topMenu">게 시 판</a>
   </div>
-  <div class="col-md-2">
-  <div class="d3">
+  <div class="col-xs-2">
+  <a href="#" id="topMenu">레 시 피</a>
+  </div>
+  <div class="col-xs-2">
+<div class="d3">
 <form>
-  <input type="text" placeholder="검색어 입력">
+  <input type="text" placeholder="검색어 입력" style="font-size: 15px !important;">
   <button type="submit"><strong><span class="glyphicon glyphicon-search"></span></strong></button>
 </form>
 </div>
-  <%-- <input type="text" id="topSearch">&nbsp;<strong><span class="glyphicon glyphicon-search"></span></strong> --%>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
     <div class="jbContent">
-	
-
 	</div>
+</div>
 </html>

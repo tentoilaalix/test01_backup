@@ -7,13 +7,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>top</title>
-	
-	<link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="resources/css/logo.css" rel="stylesheet">
-	<link href="resources/css/carouselMulti.css" rel="stylesheet">
-	<script src="resources/js/jquery-3.3.1.min.js"></script>
-	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
-	
+	<link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../resources/css/animate.css" rel="stylesheet">
+	<link href="../resources/css/wickedcss.min.css" rel="stylesheet">
+	<script src="../resources/js/jquery-3.3.1.min.js"></script>
+	<script src="../resources/bootstrap/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		a { text-decoration: none;}
  		a:link { color: black; text-decoration: none !important;}
@@ -24,8 +22,8 @@
 	<style>
 		.logo {
 			position: absolute;
-			top: 55px;
-			left: 47%;
+			top: 22px;
+			left: 45% !important;
 			display:block;
 			z-index: 10;
 		}
@@ -44,53 +42,42 @@
 	똑같이 연결됨
  -->
 	<%--■■■■■■■■■■■■■■■■■■■■■■ Top ■■■■■■■■■■■■■■■■■■■■■■■■--%>
-	<br>
 	<div class="row">
 		<div class="col-sm-offset-10">
 			<c:choose>
-			    <c:when test="${login.account_user == null}">
+			    <c:when test="${sessionScope.userId == null}">
 			        <a href="${path}/member/login.do"><strong>로그인&nbsp;</strong></a>&nbsp;｜&nbsp;
 			        <a href="${path}/member/joinMember.do"><strong>회원가입&nbsp;</strong></a>
 			    </c:when>
 			    <c:otherwise>
-			        <a href="${path}/member/mypage.do"><strong>마이페이지&nbsp;</strong></a>&nbsp;｜&nbsp;
+			        <a href="${path}/board/list.do"><strong>마이페이지&nbsp;</strong></a>&nbsp;｜&nbsp;
 			        <a href="${path}/member/logout.do"><strong>로그아웃&nbsp;</strong></a>
 			    </c:otherwise>
 			</c:choose>
 		</div>
 	</div>
 	
+	<!-- 메인 로고 : 클릭시 메인으로 이동 -->
+		<a href="../../${path}" class="logo"><img src="../resources/image/logo.png"></a>
+	
+	<!-- 로고 애니메이션 : 클릭시 메인으로 이동 -->
 	<div class="row">
-	
-		<!-- 로고 이미지 -->
-		<div class="col-md-3 col-md-offset-1" href="../../${path}">
+		<div class="col-md-6 col-md-offset-1">
 			
-				<div style="position: relative; top: 10px; left: 40px;"><img src="../resources/image/sun.png" class=sun><a href="../../${path}"><img src="../resources/image/trees.png"></a></div>
-				<div style="position: absolute; top: 100px; left: 90px;"><img src="../resources/image/cheese.png" class=floating></div>
-				<div style="position: absolute; top: 110px; left: 105px;"><img src="../resources/image/carrot.png" class=floating></div>
-				<div style="position: absolute; top: 100px; left: 120px;"><img src="../resources/image/apple.png" class=floating></div>
-				<div style="position: absolute; top: 110px; left: 135px;"><img src="../resources/image/grapes.png" class=floating></div>
-				<div style="position: absolute; top: 100px; left: 150px;"><img src="../resources/image/orange.png" class=floating></div>
-				<div style="position: absolute; top: 110px; left: 165px;"><img src="../resources/image/tomato.png" class=floating></div>
-				<div style="position: absolute; top: 100px; left: 180px;"><img src="../resources/image/strawberry.png" class=floating></div>
+			<div style="position: relative; top: 10px; left: 40px !important;"><a href="../../${path}"><img src="../resources/image/trees.png"></a></div>
+			<div style="position: absolute; top: 20px; left: 80px;"><img src="../resources/image/sun.png" class="rotation">	</div>
+			<div style="position: absolute; top: 110px; left: 67px;"><img src="../resources/image/cheese.png" class=floating></div>
+			<div style="position: absolute; top: 120px; left: 83px;"><img src="../resources/image/carrot.png" class=floating></div>
+			<div style="position: absolute; top: 110px; left: 100px;"><img src="../resources/image/apple.png" class=floating></div>
+			<div style="position: absolute; top: 120px; left: 117px;"><img src="../resources/image/grapes.png" class=floating></div>
+			<div style="position: absolute; top: 110px; left: 126px;"><img src="../resources/image/orange.png" class=floating></div>
+			<div style="position: absolute; top: 120px; left: 141px;"><img src="../resources/image/strawberry.png" class=floating></div>
+			<div style="position: absolute; top: 110px; left: 152px;"><img src="../resources/image/tomato.png" class=floating></div>
 	
-		</div>
-		
-		<!-- 메인 배너 : 클릭시 메인 메뉴로 이동 -->
-		<div class="col-md-7 col-md-offset-1">
-			<a href="../../${path}"><img src="../resources/image/logo.jpg"></a>
-		</div>
-		
+		</div>	
 	</div>
-	<br><br>
-    
-	
-
-	<br>
-	<br>
-	<br>
+	<br>	
 <%--■■■■■■■■■■■■■■■■■■■■■■ Top ■■■■■■■■■■■■■■■■■■■■■■■■--%>
-	
 </body>
 	<%@ include file = "topMenu.jsp" %>
 	<%@ include file = "topQuickMenu.jsp" %>

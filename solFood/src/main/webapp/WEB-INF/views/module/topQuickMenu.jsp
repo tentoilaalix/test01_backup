@@ -14,10 +14,10 @@
  		a:active { color: black !important; text-decoration: none !important;}
 		a:visited { color: black !important; text-decoration: none !important;}
  		.quickMenu a:hover {
- 				color: black !important;
- 				border-radius: 5px;
- 				background: #FFEBFF;
- 				text-decoration: none !important;}
+ 				background-image: url('../resources/image/check.png');
+ 				background-repeat: no-repeat;
+ 				z-index: 999 !important;
+ 				}
 	</style>
 	
 	<script>
@@ -53,25 +53,37 @@
 	#caption {
 		font-family: sans-serif;
 		font-size: 10px;
+		width: 77px;
 		display: block;
 	}
 	</style>
-	
 	
 </head>
 <body>
 	<div class="quickMenu" align="center">
 		<br>
-		<a href="cartList" id="caption"><img src="../resources/image/basket.png" alt="장바구니"><br>장바구니</a><br><br>
+		<a href="member/cartList.do" id="caption"><img src="../resources/image/basket.png" alt="장바구니"><br>장바구니</a><br><br>
 		<a href="" id="caption"><img src="../resources/image/newest.png" alt="최근 본 상품"><br>최근 본 상품</a><br><br>
 		<a href="" id="caption"><img src="../resources/image/like.png" alt="찜한 상품"><br>찜한 상품</a><br><br>
-		<a href="${path}/member/login.do"><img src="../resources/image/top.png" onclick="#" alt="맨 위로"></a><br><br>
-		<a href="${path}/board/list.do" id="caption"><img src="../resources/image/top.png" onclick="#" alt="asdasd"><br>테스트페이지</a><br><br>
-
-		<a href="${path}/member/mypage.do"><br>mypage</a><br><br>
-		<a href="${path}/manager/product/product_register.do">상품등록</a><br><br>
-
-		
+		<a href=""><img src="../resources/image/top.png" id="MOVE_TOP_BTN" alt="맨 위로"></a><br><br>
 	</div>
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

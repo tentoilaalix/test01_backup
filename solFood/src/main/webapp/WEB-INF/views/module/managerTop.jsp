@@ -8,22 +8,26 @@
 	<meta charset="UTF-8">
 	<title>manager main page</title>
 	<meta name="viewport" content="width=device-width. initial-scale=1">
-	<link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<script src="../resources/js/jquery-3.3.1.min.js"></script>
-	<script src="../resources/bootstrap/js/bootstrap.min.js"></script>
+	<link href="../../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../../resources/bootstrap/js/bootstrap.js"></script>
+	<script src="../../resources/js/jquery-3.3.1.min.js"></script>
+	<script src="../../resources/bootstrap/js/bootstrap.min.js"></script>
+	<%@ include file = "../module/topMemberCheck.jsp" %>
+	
 </head>
 
 <body data-spy= "scroll" data-target=".navbar" data-offset="50">
+	<%-- <jsp:include page="./topMemberCheck.jsp"/> --%>
 	<%--=================================== header menu ==============================================--%>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-targer="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="managerMain">Management</a>
+				<a class="navbar-brand" href="${path}/manager/managerMain.do">Management</a>
 			</div>
 			
 	<%--=================================== menu ==============================================--%>
@@ -34,15 +38,15 @@
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							상품관리<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="productInsertForm">상품등록</a></li>
-								<li><a href="product_list">상품목록</a></li>
+						<li><a href="${path}/manager/product/product_register.do">상품등록</a></li>
+						<li><a href="${path}/manager/product/product_list.do">상품목록</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="account_list">회원관리</a>
+							<a href="${path}/manager/account/account_list.do">회원관리</a>
 						</li>
 						<li>
-							<a href="buy_list">구매관리</a>
+							<a href="${path}/manager/buy/buy_list.do">구매관리</a>
 						</li>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -53,7 +57,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="board_list">게시판관리</a>
+							<a href="${path}/manager/product/product_list.do">게시판관리</a>
 						</li>
 						<li>
 							<a href="#">로그아웃</a>						
@@ -61,7 +65,8 @@
 						
 	<%--================================= 관리자 account_name 보여주기 =========================================--%>
 						<li id="administer">
-							<a href="admin_page">관리자: <%= session.getAttribute("account_name") %>님</a>
+							<a href="">관리자: <%= session.getAttribute("userName") %>님</a>
+							
 						</li>
 					</ul>
 				</div>

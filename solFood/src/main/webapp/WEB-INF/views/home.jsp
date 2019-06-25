@@ -10,6 +10,7 @@
 	<link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../resources/css/carouselMulti.css" rel="stylesheet">
 	<link href="../resources/css/animate.css" rel="stylesheet">
+	<link href="../resources/css/wickedcss.min.css" rel="stylesheet">
 	<script src="../resources/js/jquery-3.3.1.min.js"></script>
 	<script src="../resources/bootstrap/js/bootstrap.min.js"></script>
 	<script src="../resources/css/multi.js"></script>
@@ -21,10 +22,12 @@
  		a:hover { color: black !important; text-decoration: none !important;}
 	</style>
 	<style>
+		html{cursor: url(../resources/image/carrot.png), auto}
 		body {
 		padding: 10px 15px 0px 15px;
 		width: 100%;
 		font-family: 굴림체;
+		font-size: 18px;
 		align: center !important;
 		}
 
@@ -34,6 +37,7 @@
 		#eventArea {
 			background-color: #EAEAEA;
 		}
+		
 		.recipeHr {
 			border: 0;
     		height: 2px;
@@ -226,7 +230,315 @@
 </div>
 </div>
 <br><br><br><br>
-
+<%--■■■■■■■■■■■■■■■■■■■■■■ MD추천 ■■■■■■■■■■■■■■■■■■■■■■■■■--%>
+<div class="container">
+<div align="center"><h2>MD 추천</h2></div>
+<br>
+<div align="center"><h5>오늘의 MD 추천 상품은 무엇일까요 ?</h5></div>
+<hr class="recipeHr">
+<br><br>
+<div class="container" align="center">
+	<button type="button" class="bttn-fill cate1">채소</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate2">수산·해산</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate3">정육·계란</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate4">국·반찬·요리</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate5">샐러드·간편식</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate6">면·양념·오일</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate7">음료·우유·간식</button>&nbsp;&nbsp;
+	<button type="button" class="bttn-fill cate8">베이커리·델리</button>&nbsp;&nbsp;
+</div>
+<br><br><br><br>
+<div class="container">
+<div class="cate1Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate1-1.png"></a><br><br>
+			<a href=""><strong>감자 1kg/봉</strong></a><br>
+			<%=nf.format(2850)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate1-2.png"></a><br><br>
+			<a href=""><strong>GAP 오이 2입</strong></a><br>
+			<%=nf.format(1270)%>원	
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate1-3.png"></a><br><br>
+			<a href=""><strong>밤고구마 800g/봉</strong></a><br>
+			<%=nf.format(5900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate1-4.png"></a><br><br>
+			<a href=""><strong>오이맛 고추</strong></a><br>
+			<%=nf.format(990)%>원
+		</div>
+		
+	</div>
+</div>
+<div class="cate2Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate2-1.png"></a><br><br>
+			<a href=""><strong>참치회덮밥</strong></a><br>
+			<%=nf.format(11000)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate2-2.png"></a><br><br>
+			<a href=""><strong>[Sea to Table] 물회</strong></a><br>
+			<%=nf.format(12500)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate2-3.png"></a><br><br>
+			<a href=""><strong>[삼삼해물] 왕 바지락</strong></a><br>
+			<%=nf.format(8200)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate2-4.png"></a><br><br>
+			<a href=""><strong>[연어연구소]곤부지메 숙성연어</strong></a><br>
+			<%=nf.format(10000)%>원
+		</div>
+	</div>
+</div>
+<div class="cate3Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate3-1.png"></a><br><br>
+			<a href=""><strong>[미트클레버]더 건강한 삼겹살</strong></a><br>
+			<%=nf.format(16150)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate3-2.png"></a><br><br>
+			<a href=""><strong>[이베리쿡] 이베리코 레드미트</strong></a><br>
+			<%=nf.format(13320)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate3-3.png"></a><br><br>
+			<a href=""><strong>[SolFood] 동물복지 유정란</strong></a><br>
+			<%=nf.format(4800)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate3-4.png"></a><br><br>
+			<a href=""><strong>[상하농원] 순백색 유정란</strong></a><br>
+			<%=nf.format(5200)%>원
+		</div>
+	</div>
+</div>
+<div class="cate4Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate4-1.png"></a><br><br>
+			<a href=""><strong>[고봉] 얼큰한 대구탕</strong></a><br>
+			<%=nf.format(13800)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate4-2.png"></a><br><br>
+			<a href=""><strong>[올쿡] 불고기 새싹 비빔밥</strong></a><br>
+			<%=nf.format(9810)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate4-3.png"></a><br><br>
+			<a href=""><strong>[동트는농가] 곤드레 된장찌개</strong></a><br>
+			<%=nf.format(3910)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate4-4.png"></a><br><br>
+			<a href=""><strong>[모노링크] 치즈 등심 돈까스</strong></a><br>
+			<%=nf.format(10000)%>원
+		</div>
+	</div>
+</div>
+<div class="cate5Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate5-1.png"></a><br><br>
+			<a href=""><strong>미미네 떡볶이</strong></a><br>
+			<%=nf.format(4900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate5-2.png"></a><br><br>
+			<a href=""><strong>[어게인프레쉬] 샐러드 5종</strong></a><br>
+			<%=nf.format(5900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate5-3.png"></a><br><br>
+			<a href=""><strong>[중앙닭강정] 닭강정 3종</strong></a><br>
+			<%=nf.format(12900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate5-4.png"></a><br><br>
+			<a href=""><strong>[진양횟집] 오징어 물회</strong></a><br>
+			<%=nf.format(12900)%>원
+		</div>
+	</div>
+</div>
+<div class="cate6Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate6-1.png"></a><br><br>
+			<a href=""><strong>[론소니] 베지 파스타 4종</strong></a><br>
+			<%=nf.format(3500)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate6-2.png"></a><br><br>
+			<a href=""><strong>[이케지마] 삼색소면 3종</strong></a><br>
+			<%=nf.format(2970)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate6-3.png"></a><br><br>
+			<a href=""><strong>[소라치]잇핀 부타동 소스</strong></a><br>
+			<%=nf.format(4140)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate6-4.png"></a><br><br>
+			<a href=""><strong>[신영]페페로치노 홀 18g</strong></a><br>
+			<%=nf.format(5900)%>원
+		</div>
+	</div>
+</div>
+<div class="cate7Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate7-1.png"></a><br><br>
+			<a href=""><strong>[우사기] 일본 모찌 4종</strong></a><br>
+			<%=nf.format(4900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate7-2.png"></a><br><br>
+			<a href=""><strong>[굴리베르] 홈메이드 쿠키 3종</strong></a><br>
+			<%=nf.format(4900)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate7-3.png"></a><br><br>
+			<a href=""><strong>[연세우유] 1A 가볍다 우유</strong></a><br>
+			<%=nf.format(500)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate7-4.png"></a><br><br>
+			<a href=""><strong>[대학두유] 대학약콩</strong></a><br>
+			<%=nf.format(20400)%>원
+		</div>
+	</div>
+</div>
+<div class="cate8Form" id="mdArea">
+	<div class="row" align="center">
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate8-1.png"></a><br><br>
+			<a href=""><strong>[아워홈] 치즈앤올리브 식빵</strong></a><br>
+			<%=nf.format(4410)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate8-2.png"></a><br><br>
+			<a href=""><strong>[구선아베이커리]빨미까레</strong></a><br>
+			<%=nf.format(7000)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate8-3.png"></a><br><br>
+			<a href=""><strong>[구선아베이커리] 새우감자 크로와상</strong></a><br>
+			<%=nf.format(4000)%>원
+		</div>
+		<div class="col-xs-3">
+			<a href=""><img src="../resources/image/cate8-4.png"></a><br><br>
+			<a href=""><strong>[사층빵집] 마카롱 10종</strong></a><br>
+			<%=nf.format(5000)%>원
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<br><br><br>
+<script>
+$(document).ready(function() {
+	$('.cate1Form').hide();
+	$('.cate2Form').hide();
+	$('.cate3Form').hide();
+	$('.cate4Form').hide();
+	$('.cate5Form').hide();
+	$('.cate6Form').hide();
+	$('.cate7Form').hide();
+	$('.cate8Form').hide();
+	$('.cate1').click(function() {
+		$('.cate1Form').fadeIn(1500);
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate2').click(function() {
+		$('.cate2Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate3').click(function() {
+		$('.cate3Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate4').click(function() {
+		$('.cate4Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate5').click(function() {
+		$('.cate5Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate6').click(function() {
+		$('.cate6Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate7Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate7').click(function() {
+		$('.cate7Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate8Form').hide();
+	});
+	$('.cate8').click(function() {
+		$('.cate8Form').fadeIn(1500);
+		$('.cate1Form').hide();
+		$('.cate2Form').hide();
+		$('.cate3Form').hide();
+		$('.cate4Form').hide();
+		$('.cate5Form').hide();
+		$('.cate6Form').hide();
+		$('.cate7Form').hide();
+	});
+});
+</script>
+<%--■■■■■■■■■■■■■■■■■■■■■■ MD추천 ■■■■■■■■■■■■■■■■■■■■■■■■■--%>
+<br><br><br><br>
 <%--■■■■■■■■■■■■■■■■■■■■■■ 레시피 ■■■■■■■■■■■■■■■■■■■■■■■■■--%>
 <div class="container">
 <div align="center"><h2>SolFood 레시피</h2></div>
@@ -261,14 +573,17 @@
 </div><br><br><br>
 <div class="container" id="recipeInfo">
 <div align="center">
-	<img src="../resources/image/spatula.png" class="bounce">&nbsp;
-	<img src="../resources/image/cleaver.png" class="bounce">&nbsp;
-	<img src="../resources/image/ladle.png" class="bounce">&nbsp;
-	<img src="../resources/image/stew.png" class="bounce">&nbsp;&nbsp;
+	<div class="wiggle">
+	<img src="../resources/image/spatula.png" >&nbsp;
+	<img src="../resources/image/cleaver.png" >&nbsp;
+	<img src="../resources/image/ladle.png" >&nbsp;
+	<img src="../resources/image/stew.png" >&nbsp;&nbsp;
+	</div>
 	<br><br>
 	<p style="font-size: 15px; font-weight: bold">SolFood만의 레시피로 건강하고 맛있는 요리를 해보세요 !</p>
 </div>
 </div>
+<%--■■■■■■■■■■■■■■■■■■■■■■ 레시피 ■■■■■■■■■■■■■■■■■■■■■■■■■--%>
 <br>
 <br>
 <br>

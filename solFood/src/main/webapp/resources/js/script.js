@@ -1,6 +1,6 @@
-//-------------------------------------------------------
-// 책 등록
-//-------------------------------------------------------
+//--------------------------------------
+//	책 등록
+//--------------------------------------
 function checkForm(writeform)
 {
 	if(!writeform.book_kind.value) {
@@ -29,13 +29,13 @@ function checkForm(writeform)
 		return false;
 	}
 	if(!writeform.publishing_com.value) {
-		alert("출판사를 입력하십시오.");
+		alert("책의 출판사를 입력하십시오.");
 		writeform.publishing_com.focus();
 		return false;
 	}
 	if(!writeform.book_content.value) {
 		alert("책의 내용을 입력하십시오.");
-		writeform.book_cotent.focus();
+		writeform.book_content.focus();
 		return false;
 	}
 	if(!writeform.discount_rate.value) {
@@ -47,7 +47,7 @@ function checkForm(writeform)
 	writeform.submit();
 }
 
-function updateCheckForm(writeform) 
+function updateCheckForm(writeform)
 {
 	if(!writeform.book_kind.value) {
 		alert("책의 분류를 선택하십시오.");
@@ -75,13 +75,13 @@ function updateCheckForm(writeform)
 		return false;
 	}
 	if(!writeform.publishing_com.value) {
-		alert("출판사를 입력하십시오.");
+		alert("책의 출판사를 입력하십시오.");
 		writeform.publishing_com.focus();
 		return false;
 	}
 	if(!writeform.book_content.value) {
 		alert("책의 내용을 입력하십시오.");
-		writeform.book_cotent.focus();
+		writeform.book_content.focus();
 		return false;
 	}
 	if(!writeform.discount_rate.value) {
@@ -89,33 +89,6 @@ function updateCheckForm(writeform)
 		writeform.discount_rate.focus();
 		return false;
 	}
-
 	writeform.action = "bookUpdatePro.jsp";
 	writeform.submit();
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
